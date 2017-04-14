@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Sansita');
+#home {
+  background: url("../images/bg/home/homebg.jpg") no-repeat center center;
+  background-size: 100%;
+  height: 100vh;
+  color: #fff;
+}
+#home .space_row {
+  height: 50px;
+}
+#home .sansita_font {
+  font-family: "Sansita", serif;
+}
+#home .heading_font {
+  font-size: 60px;
+}
+#home .home_button {
+  border: 4px solid #fff;
+  background: transparent;
+  font-weight: bold;
+  color: #fff;
+  font-size: 30px;
+  line-height: 2em;
+}
+#home .home_button:hover {
+  background: #fff;
+  opacity: 0.7;
+  color: #000;
+}
+#home #home_footer {
+  width: 100%;
+  position: absolute;
+  bottom: 2px;
+  font-size: 10px;
+  font-family: monospace, sans-serif;
+  text-align: center;
+}
+#loginModal label,
+#registerModal label {
+  line-height: 34px;
+  vertical-align: middle;
+}
+#loginModal .modal-footer,
+#registerModal .modal-footer {
+  text-align: left;
+}
+#loginModal a#forgot_pass,
+#registerModal a#forgot_pass {
+  color: gray;
+  line-height: 34px;
+}

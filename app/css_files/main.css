@@ -1,0 +1,29 @@
+#main .thumbnail {
+  color: #fff;
+  text-align: center;
+  line-height: 3em;
+  font-size: 36px;
+}
+#main #section_words {
+  border: 2px solid #2b669a;
+  background: #2e6da4;
+}
+#main #section_tests {
+  border: 2px solid #e38d13;
+  background: #ec971f;
+}
+#main #section_stats {
+  border: 2px solid #3c763d;
+  background: #398439;
+}
+#main #section_about {
+  cursor: pointer;
+  border: 2px solid #bbb;
+  background: #eee;
+  color: #444;
+}
+#main #section_about p {
+  font-size: 16px;
+  line-height: 1.2em;
+  padding: 2px 7px;
+}

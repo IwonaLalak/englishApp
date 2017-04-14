@@ -1,0 +1,13 @@
+#test .form-horizontal .form-group {
+  margin-bottom: 25px;
+}
+#test .form-horizontal .form-group label {
+  line-height: 2em;
+}
+#test .form-horizontal .form-group .btn-default {
+  margin-top: 10px;
+}
+#test .form-horizontal .form-group .checkbox-inline span,
+#test .form-horizontal .form-group .radio-inline span {
+  line-height: 2em;
+}
