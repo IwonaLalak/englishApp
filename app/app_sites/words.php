@@ -48,29 +48,54 @@
                             </label>
                         </div>
                         <div class="col-md-9 col-lg-9 col-xs-12">
-                            <div class="checkbox-inline">
-                                <input type="checkbox" class="checkbox "/> jedzenie
-                            </div>
-                            <div class="checkbox-inline">
-                                <input type="checkbox" class="checkbox "/> czasowniki
-                            </div>
-                            <div class="checkbox-inline">
-                                <input type="checkbox" class="checkbox "/> sport i zdrowie
-                            </div>
-                            <div class="checkbox-inline">
-                                <input type="checkbox" class="checkbox "/> rozrywka
-                            </div>
-                            <div class="checkbox-inline">
-                                <input type="checkbox" class="checkbox "/> przymiotniki
-                            </div>
-                            <div class="checkbox-inline">
-                                <input type="checkbox" class="checkbox "/> wyrażenia
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox "/> jedzenie
+                                    </div>
+                                    <div class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox "/> czasowniki
+                                    </div>
+                                    <div class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox "/> sport i zdrowie
+                                    </div>
+                                    <div class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox "/> rozrywka
+                                    </div>
+                                    <div class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox "/> przymiotniki
+                                    </div>
+                                    <div class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox "/> wyrażenia
+                                    </div>
+
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox "/> elektronika
+                                    </div>
+                                    <div class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox "/> urządzenia
+                                    </div>
+                                    <div class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox "/> rzeczowniki
+                                    </div>
+                                    <div class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox "/> rzeczy codziennego użytku
+                                    </div>
+                                    <div class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox "/> przekąski
+                                    </div>
+                                    <div class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox "/> napoje
+                                    </div>
+                                </div>
                             </div>
 
                         </div>
                         <div class="col-md-1 col-xs-12 col-lg-1">
                             <button type="button" class="btn btn-success btn-block">
-                                Add word
+                                Add
                             </button>
                         </div>
                     </div>

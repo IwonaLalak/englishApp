@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Sansita');
+/* colors */
+/* font */
+/* radius of buttons, forms, thubnails, modals...*/
+/* animations */
+.btn {
+  color: #fff;
+  font-weight: bold;
+  transition: all 0.4s ease 0s;
+  border-radius: 1px;
+}
+.btn:hover,
+.btn:active,
+.btn:focus {
+  color: #fff;
+}
+.btn-pink {
+  background: #a51a41;
+}
+.btn-pink:hover {
+  background: #6e112c;
+}
+.btn-success {
+  background: #00cc00;
+}
+.btn-success:hover {
+  background: #008000;
+}
+.btn-danger {
+  background: #e60000;
+}
+.btn-danger:hover {
+  background: #990000;
+}
+.btn-warning {
+  background: #ff7733;
+}
+.btn-warning:hover {
+  background: #ff5500;
+}
+.btn-neutral {
+  background: #29a3a3;
+}
+.btn-neutral:hover {
+  background: #1f7a7a;
+}

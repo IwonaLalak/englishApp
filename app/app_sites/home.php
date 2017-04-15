@@ -94,7 +94,7 @@
                         <a href="" id="forgot_pass">I forgot my pass</a>
                     </div>
                     <div class="col-md-3 col-md-offset-3 col-xs-6 col-xs-5 col-xs-offset-1">
-                        <button type="submit" class="btn btn-success btn-block" ng-click="vm.logIn(vm.user_login,vm.user_password)">Login</button>
+                        <button type="submit" class="btn btn-pink btn-block" ng-click="vm.logIn(vm.user_login,vm.user_password)">Login</button>
                     </div>
                 </div>
             </div>
@@ -150,7 +150,7 @@
 
                     </div>
                     <div class="col-md-3 col-md-offset-3 col-xs-6 col-xs-5 col-xs-offset-1">
-                        <button type="button" class="btn btn-primary">Register</button>
+                        <button type="button" class="btn btn-pink btn-block">Register</button>
                     </div>
                 </div>
             </div>

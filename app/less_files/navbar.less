@@ -1,6 +1,31 @@
+@import "variables";
+
 #navbar{
   .navbar-default{
-    border: 1px solid #000;
+    border: 1px solid transparent;
     border-radius: 0;
   }
+  a.navbar-brand{
+    font-family: @sansita-font;
+    font-size:24px;
+    color: @primary-color;
+  }
+  a.navbar-brand:hover{
+    color:@primary-color-darker;
+  }
+
+  .navbar-right{
+    li{
+      a{
+        border-bottom: 3px solid transparent;
+        transition: @fade-animation;
+
+      }
+      a:hover{
+        color:@primary-color;
+        border-bottom:3px solid @primary-color;
+      }
+    }
+  }
+
 }

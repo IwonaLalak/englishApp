@@ -1,29 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Sansita');
+/* colors */
+/* font */
+/* radius of buttons, forms, thubnails, modals...*/
+/* animations */
+#main #say_hello {
+  margin: 40px 0 20px 0;
+}
+#main #user_avatar .thumbnail {
+  max-width: 200px;
+  margin: 0 auto;
+}
+#main #user_avatar .thumbnail img {
+  max-width: 100%;
+}
+#main #sections {
+  margin-top: 30px;
+}
 #main .thumbnail {
-  color: #fff;
+  transition: all 0.4s ease 0s;
+}
+#main .thumbnail:hover {
+  border-color: #00264d;
+}
+#main #section_words,
+#main #section_tests,
+#main #section_stats,
+#main #section_about {
   text-align: center;
-  line-height: 3em;
-  font-size: 36px;
+  line-height: 2em;
+  font-size: 24px;
 }
-#main #section_words {
-  border: 2px solid #2b669a;
-  background: #2e6da4;
+#main #section_words span,
+#main #section_tests span,
+#main #section_stats span,
+#main #section_about span,
+#main #section_words p,
+#main #section_tests p,
+#main #section_stats p,
+#main #section_about p {
+  color: #004080;
+  transition: all 0.4s ease 0s;
 }
-#main #section_tests {
-  border: 2px solid #e38d13;
-  background: #ec971f;
-}
-#main #section_stats {
-  border: 2px solid #3c763d;
-  background: #398439;
+#main #section_words .glyphicon,
+#main #section_tests .glyphicon,
+#main #section_stats .glyphicon,
+#main #section_about .glyphicon {
+  margin-top: 15px;
+  font-size: 30px;
 }
 #main #section_about {
   cursor: pointer;
-  border: 2px solid #bbb;
-  background: #eee;
-  color: #444;
 }
 #main #section_about p {
-  font-size: 16px;
-  line-height: 1.2em;
+  margin-top: 5px;
+  color: #222;
+  font-size: 14px;
+  line-height: 1.5em;
   padding: 2px 7px;
+  text-align: justify;
+}
+#main a#section_words:hover,
+#main a#section_stats:hover,
+#main a#section_tests:hover,
+#main div#section_about:hover {
+  text-decoration: none;
+}
+#main a#section_words:hover *,
+#main a#section_stats:hover *,
+#main a#section_tests:hover *,
+#main div#section_about:hover * {
+  color: #00264d;
 }

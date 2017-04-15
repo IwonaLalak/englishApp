@@ -62,7 +62,7 @@
 <script src="resources/bootstrap/js/bootstrap.js"></script>
 <script src="resources/angular/angular.js"></script>
 <script src="resources/angular-route/angular-route.js"></script>
-<script src="js_files/main.js"></script>
+<script src="angular_files/main.js"></script>
 <script src="app_parts/navbar/navbarDirective.js"></script>
 <script src="app_parts/footer/footerDirective.js"></script>
 <script src="angular_files/mainController.js"></script>

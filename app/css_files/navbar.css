@@ -1,4 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Sansita');
+/* colors */
+/* font */
+/* radius of buttons, forms, thubnails, modals...*/
+/* animations */
 #navbar .navbar-default {
-  border: 1px solid #000;
+  border: 1px solid transparent;
   border-radius: 0;
+}
+#navbar a.navbar-brand {
+  font-family: "Sansita", serif;
+  font-size: 24px;
+  color: #004080;
+}
+#navbar a.navbar-brand:hover {
+  color: #00264d;
+}
+#navbar .navbar-right li a {
+  border-bottom: 3px solid transparent;
+  transition: all 0.4s ease 0s;
+}
+#navbar .navbar-right li a:hover {
+  color: #004080;
+  border-bottom: 3px solid #004080;
 }

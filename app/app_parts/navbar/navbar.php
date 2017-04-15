@@ -18,7 +18,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Brand</a>
+                <a class="navbar-brand" href="#">EnglishApp</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -27,8 +27,9 @@
                     <li><a href="#">HOME</a></li>
                     <li><a href="#">WORDS</a></li>
                     <li><a href="#">TESTS</a></li>
-                    <li><a href="#">ACTIVITY</a></li>
-                    <li class="dropdown">
+                    <li><a href="#">STATS</a></li>
+                    <li><a href="#">LOG OUT</a></li>
+                   <!-- <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                            aria-expanded="false">QUICK MENU <span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -38,7 +39,7 @@
                             <li role="separator" class="divider"></li>
                             <li><a href="#">Log out</a></li>
                         </ul>
-                    </li>
+                    </li>-->
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
