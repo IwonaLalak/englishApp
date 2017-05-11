@@ -8,5 +8,8 @@
 
 $db_serv = "localhost";
 $db_user = "root";
-$db_pass="";
+$db_pass="FE;lDpd#/5-t";
 $db_name = "englishApp";
+$db_charset = "utf8";
+
+// todo: to delete

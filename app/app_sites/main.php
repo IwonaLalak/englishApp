@@ -95,8 +95,8 @@
             </div>
         </div>
 
-        <div style="height: 200px;"></div>
-
+        <div style="height: 50px;"></div>
+<!--
         <div class="row">
             <div class="col-md-12">
                 <button class="btn btn-primary" ng-click="vm.doSomething()">click me</button>
@@ -143,7 +143,7 @@
         </div>
 
 
-        <div style="height: 200px"></div>
+        <div style="height: 200px"></div>-->
 
 
     </div>

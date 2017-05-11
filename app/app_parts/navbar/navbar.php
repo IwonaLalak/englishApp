@@ -24,10 +24,10 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">WORDS</a></li>
-                    <li><a href="#">TESTS</a></li>
-                    <li><a href="#">STATS</a></li>
+                    <li><a href="#/main">HOME</a></li>
+                    <li><a href="#/words">WORDS</a></li>
+                    <li><a href="#/tests">TESTS</a></li>
+                    <li><a href="#/stats">STATS</a></li>
                     <li><a href="#">LOG OUT</a></li>
                    <!-- <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"

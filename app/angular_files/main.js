@@ -32,8 +32,8 @@ angular.module('englishApp', [
 
             .when("/tests", {
                 templateUrl: "app_sites/tests.php",
-                controller: "testsController"
-                //controllerAs: "vm"
+                controller: "testsController",
+                controllerAs: "vm"
             })
 
 

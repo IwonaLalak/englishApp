@@ -1,3 +1,11 @@
 #words thead {
   font-weight: bold;
 }
+#words #place_for_tags {
+  overflow-y: auto;
+  height: 50px;
+  line-height: 3em;
+}
+#words #place_for_tags .checkbox-inline {
+  line-height: 2em;
+}

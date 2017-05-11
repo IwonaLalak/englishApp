@@ -11,3 +11,11 @@
 #test .form-horizontal .form-group .radio-inline span {
   line-height: 2em;
 }
+#test .form-horizontal #place_for_tags {
+  overflow-y: auto;
+  height: 50px;
+  line-height: 3em;
+}
+#test .form-horizontal #place_for_tags .checkbox-inline {
+  line-height: 2em;
+}

@@ -4,7 +4,7 @@
 /* radius of buttons, forms, thubnails, modals...*/
 /* animations */
 #main #say_hello {
-  margin: 40px 0 20px 0;
+  margin: 5px 0 20px 0;
 }
 #main #user_avatar .thumbnail {
   max-width: 200px;

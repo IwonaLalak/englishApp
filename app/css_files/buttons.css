@@ -14,33 +14,45 @@
 .btn:focus {
   color: #fff;
 }
+.btn-navy {
+  background: #004080;
+}
+.btn-navy:hover,
+.btn-navy:focus {
+  background: #00264d;
+}
 .btn-pink {
   background: #a51a41;
 }
-.btn-pink:hover {
+.btn-pink:hover,
+.btn-pink:focus {
   background: #6e112c;
 }
 .btn-success {
   background: #00cc00;
 }
-.btn-success:hover {
+.btn-success:hover,
+.btn-success:focus {
   background: #008000;
 }
 .btn-danger {
   background: #e60000;
 }
-.btn-danger:hover {
+.btn-danger:hover,
+.btn-danger:focus {
   background: #990000;
 }
 .btn-warning {
   background: #ff7733;
 }
-.btn-warning:hover {
+.btn-warning:hover,
+.btn-warning:focus {
   background: #ff5500;
 }
 .btn-neutral {
   background: #29a3a3;
 }
-.btn-neutral:hover {
+.btn-neutral:hover,
+.btn-neutral:focus {
   background: #1f7a7a;
 }

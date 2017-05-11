@@ -6,7 +6,7 @@
  * Time: 15:37
  */
 ?>
-
+<div english-navbar></div>
 
 <div id="test">
     <div class="container">
@@ -52,7 +52,7 @@
                                     </label>
                                 </div>
                                 <div class="col-md-8 col-lg-8 col-xs-5">
-                                    <div class="radio-inline">
+                                    <!--<div class="radio-inline">
                                         <input type="radio" class="radio" name="type_of_words" checked="checked"/>
                                         <span>low</span>
                                     </div>
@@ -61,7 +61,8 @@
                                     </div>
                                     <div class="radio-inline">
                                         <input type="radio" class="radio" name="type_of_words"/> <span>high</span>
-                                    </div>
+                                    </div>-->
+                                    <input type="number" class="form-control" />
                                 </div>
                             </div>
                         </div>
@@ -72,7 +73,43 @@
                                 Choose categories
                             </label>
                         </div>
-                        <div class="col-md-9 col-lg-9 col-xs-8">
+                        <div class="col-md-9 col-lg-9 col-xs-8" id="place_for_tags">
+                            <div class="checkbox-inline">
+                                <input type="checkbox" class="checkbox "/> <span>jedzenie</span>
+                            </div>
+                            <div class="checkbox-inline">
+                                <input type="checkbox" class="checkbox "/> <span>czasowniki</span>
+                            </div>
+                            <div class="checkbox-inline">
+                                <input type="checkbox" class="checkbox "/> <span>sport i zdrowie</span>
+                            </div>
+                            <div class="checkbox-inline">
+                                <input type="checkbox" class="checkbox "/> <span>rozrywka</span>
+                            </div>
+                            <div class="checkbox-inline">
+                                <input type="checkbox" class="checkbox "/> <span>przymiotniki</span>
+                            </div>
+                            <div class="checkbox-inline">
+                                <input type="checkbox" class="checkbox "/> <span>wyrażenia</span>
+                            </div>
+                            <div class="checkbox-inline">
+                                <input type="checkbox" class="checkbox "/> <span>jedzenie</span>
+                            </div>
+                            <div class="checkbox-inline">
+                                <input type="checkbox" class="checkbox "/> <span>czasowniki</span>
+                            </div>
+                            <div class="checkbox-inline">
+                                <input type="checkbox" class="checkbox "/> <span>sport i zdrowie</span>
+                            </div>
+                            <div class="checkbox-inline">
+                                <input type="checkbox" class="checkbox "/> <span>rozrywka</span>
+                            </div>
+                            <div class="checkbox-inline">
+                                <input type="checkbox" class="checkbox "/> <span>przymiotniki</span>
+                            </div>
+                            <div class="checkbox-inline">
+                                <input type="checkbox" class="checkbox "/> <span>wyrażenia</span>
+                            </div>
                             <div class="checkbox-inline">
                                 <input type="checkbox" class="checkbox "/> <span>jedzenie</span>
                             </div>
@@ -93,14 +130,14 @@
                             </div>
                         </div>
                         <div class="col-md-1 col-lg-1 col-xs-1">
-                            <button type="button" class="btn btn-default btn-block btn-xs">
+                            <button id="selectAllTags" type="button" class="btn btn-default btn-block btn-xs btn-navy" ng-click="vm.selectAllTags()">
                                 Select all
                             </button>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <button type="button" class="btn btn-success btn-block">
+                            <button type="button" class="btn btn-pink btn-block">
                                 Generate test
                             </button>
                         </div>
@@ -120,3 +157,5 @@
 
     </div>
 </div>
+
+<div english-footer></div>

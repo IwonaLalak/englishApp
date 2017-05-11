@@ -119,7 +119,7 @@
                             </label>
                         </div>
                         <div class="col-md-8">
-                            <input type="text" class="form-control"/>
+                            <input type="text" class="form-control" ng-model="vm.register_username"/>
                         </div>
                     </div>
                     <div class="form-group">
@@ -129,7 +129,7 @@
                             </label>
                         </div>
                         <div class="col-md-8">
-                            <input type="password" class="form-control" />
+                            <input type="password" class="form-control" ng-model="vm.register_password"/>
                         </div>
                     </div>
                     <div class="form-group">
@@ -139,7 +139,7 @@
                             </label>
                         </div>
                         <div class="col-md-8">
-                            <input type="email" class="form-control" />
+                            <input type="email" class="form-control" ng-model="vm.register_email"/>
                         </div>
                     </div>
                 </form>
@@ -150,7 +150,7 @@
 
                     </div>
                     <div class="col-md-3 col-md-offset-3 col-xs-6 col-xs-5 col-xs-offset-1">
-                        <button type="button" class="btn btn-pink btn-block">Register</button>
+                        <button type="button" class="btn btn-pink btn-block" ng-click="vm.register(vm.register_username,vm.register_password,vm.register_email)">Register</button>
                     </div>
                 </div>
             </div>

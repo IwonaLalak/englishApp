@@ -8,6 +8,8 @@
 
 ?>
 
+<div english-navbar></div>
+
 <div id="words">
     <div class="container">
 
@@ -48,7 +50,7 @@
                             </label>
                         </div>
                         <div class="col-md-9 col-lg-9 col-xs-12">
-                            <div class="row">
+                            <div class="row" id="place_for_tags">
                                 <div class="col-md-12">
                                     <div class="checkbox-inline">
                                         <input type="checkbox" class="checkbox "/> jedzenie
@@ -68,9 +70,6 @@
                                     <div class="checkbox-inline">
                                         <input type="checkbox" class="checkbox "/> wyrażenia
                                     </div>
-
-                                </div>
-                                <div class="col-md-12">
                                     <div class="checkbox-inline">
                                         <input type="checkbox" class="checkbox "/> elektronika
                                     </div>
@@ -128,6 +127,7 @@
                         </td>
                         <td>
                             <span class="glyphicon glyphicon-check"></span>
+                            LEARNED?
                         </td>
                         <td>
                             <span class="glyphicon glyphicon-pencil"></span>
@@ -201,3 +201,5 @@
         </div>
     </div>
 </div>
+
+<div english-footer></div>
