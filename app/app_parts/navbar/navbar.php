@@ -6,7 +6,7 @@
  * Time: 18:49
  */
 ?>
-<div id="navbar">
+<div id="navbar" ng-controller="englishNavbarController as vm" >
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -28,7 +28,7 @@
                     <li><a href="#/words">WORDS</a></li>
                     <li><a href="#/tests">TESTS</a></li>
                     <li><a href="#/stats">STATS</a></li>
-                    <li><a href="#">LOG OUT</a></li>
+                    <li><a ng-click="vm.logOut()" style="cursor: pointer">LOG OUT</a></li>
                    <!-- <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                            aria-expanded="false">QUICK MENU <span class="caret"></span></a>

@@ -42,6 +42,8 @@ angular.module('englishApp', [
                 controller: "mainController",
                 controllerAs: "vm"
             })
+            .otherwise('/');
+
 
         /*    .when("/profile", {
                 templateUrl: "app/profile/profile.html",

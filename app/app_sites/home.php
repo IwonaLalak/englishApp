@@ -51,6 +51,11 @@
             </div>
         </div>
     </div>
+    <!-- to check -->
+    <!--<div>
+        <button ng-click="vm.tryToGetToken()">get token</button>;
+    </div>-->
+
     <div id="home_footer">
         English App 2017 &copy; | created by Iwona 'SZEFOW4' Lalak
     </div>
@@ -85,6 +90,8 @@
                         <div class="col-md-8">
                             <input type="password" class="form-control" ng-model="vm.user_password"/>
                         </div>
+                    </div>
+                    <div id="login_message">
                     </div>
                 </form>
             </div>
@@ -142,12 +149,13 @@
                             <input type="email" class="form-control" ng-model="vm.register_email"/>
                         </div>
                     </div>
+                    <div id="register_message">
+                    </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <div class="row">
                     <div class="col-md-6 col-xs-6">
-
                     </div>
                     <div class="col-md-3 col-md-offset-3 col-xs-6 col-xs-5 col-xs-offset-1">
                         <button type="button" class="btn btn-pink btn-block" ng-click="vm.register(vm.register_username,vm.register_password,vm.register_email)">Register</button>

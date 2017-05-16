@@ -3,80 +3,139 @@
 /**
  * Created by IntelliJ IDEA.
  * User: Iwona
- * Date: 29.04.17
- * Time: 15:34
+ * Date: 11.05.17
+ * Time: 16:59
  */
-//require_once "serviceInterface.php";
-/*require_once "../database/Connection.php";
-require_once "../entities/User.php";*/
-require_once $_SERVER['DOCUMENT_ROOT'] . "/app/php_files/entities/User.php";
-require_once $_SERVER['DOCUMENT_ROOT'] . "/app/php_files/database/Connection.php";
+
+//require_once "../database/Connection.php";
+//require_once "../classes/User.php";
+
+require_once $_SERVER['DOCUMENT_ROOT'] . '/englishApp/app/php_files/database/Connection.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/englishApp/app/php_files/classes/User.php';
+
 
 class userService
 {
-
-    public function getAll()
+    public function saySomething()
     {
-        $sql = "SELECT * FROM users";
+        echo "something";
+    }
+
+    public function getAllUsers()
+    {
+        $sql = "select * from users";
         $con = Connection::getInstance();
         $stmt = $con->handle->query($sql);
-        if (!(empty($stmt)))
+        if ($stmt->rowCount() > 0) {
             return $stmt->fetchAll();
-        else return false;
+        } else {
+            return false;
+        }
     }
 
-    public function getById($id)
+    public function getUserById($id)
     {
-        /*$sql = "SELECT * FROM users WHERE users.id=:id";
+        $sql = "select * from users where user_id=:id";
         $con = Connection::getInstance();
         $stmt = $con->handle->prepare($sql);
-        $stmt->bindParam(':id', $id, PDO::PARAM_STR);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
-        if (!empty($stmt)) {
-            return $stmt->fetchAll(PDO::FETCH_CLASS, 'User');
-        } else return false;*/
+        if ($stmt->rowCount() > 0) {
+            return $stmt->fetch();
+        } else {
+            return false;
+        }
     }
 
-    public function insert($obj)
-    {
-        // TODO: Implement insert() method.
+    public function loginOnAccount($obj){
+        $sql = "select user_id, email, user_points from users where login=:login and password=:password";
+        $con = Connection::getInstance();
+        $stmt = $con->handle->prepare($sql);
+        $stmt->bindParam(':login', $obj->getUsername(), PDO::PARAM_STR);
+        $stmt->bindParam(':password', $obj->getPassword(), PDO::PARAM_STR);
+        $stmt->execute();
+         if ($stmt->rowCount() > 0) {
+            $obj->setUserid($stmt->fetch()["user_id"]);
+            $obj->setEmail($stmt->fetch()["email"]);
+            $obj->setLastVisit(date("d-m-20y"));
+            $obj->setToken($this->generateToken($obj));
+            $this->updateLastVisit($obj);
+
+            return true;
+        } else {
+            return false;
+        }
     }
 
-    public function update($obj)
-    {
-        // TODO: Implement update() method.
+    public function updateLastVisit($obj){
+        $sql = "UPDATE `users` SET `last_visit` = CURRENT_TIMESTAMP WHERE `users`.`user_id` = :id";
+        $con = Connection::getInstance();
+        $stmt = $con->handle->prepare($sql);
+        $stmt->bindParam(':id', $obj->getUserid() , PDO::PARAM_INT);
+        $stmt->execute();
+        if ($stmt->rowCount() > 0) {
+            return true;
+        }
     }
 
-    public function remove($obj)
-    {
-        // TODO: Implement remove() method.
+    public function generateToken($obj){
+        $token = base64_encode($obj->getUserid()."/".$obj->getUsername()."/");
+        $token = base64_encode($token."/".$obj->getLastVisit());
+        return $token;
+
     }
 
-    public function __construct()
-    {
+    public function decodeToken($token){
+        $decoded =  base64_decode(substr(base64_decode($token),0,(strlen(base64_decode($token)))-11));
+        echo $decoded."                          ";
+        $array = explode("/",$decoded);
+        echo $array[0].' '.$array[1];
+        // TODO: return data
+
     }
-/*
+
+    public function checkIfUserExist($obj)
+    {
+        $sql = "select * from users where login=:login";
+        $con = Connection::getInstance();
+        $stmt = $con->handle->prepare($sql);
+        $stmt->bindParam(':login', $obj->getUsername(), PDO::PARAM_STR);
+        $stmt->execute();
+        if ($stmt->rowCount() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public function register($obj)
     {
         $sql = "INSERT INTO `users` (`user_id`, `login`, `password`, `email`, `avatar_url`, `native_lang`, `foreign_lang`, `last_visit`, `user_points`) 
-            VALUES (NULL, :login, :password, :email, '/images/default_avatar.jpg', 'polish', 'english', CURRENT_TIMESTAMP, '0')";
+                VALUES (NULL, :login, :password, :email, '/images/default_avatar.jpg', 'polish', 'english', CURRENT_TIMESTAMP, '0')";
         $con = Connection::getInstance();
         $stmt = $con->handle->prepare($sql);
-        $stmt->bindParam(':login', $obj->User->getLogin(), PDO::PARAM_STR);
-        $stmt->bindParam(':password', $obj->User->getPassword(), PDO::PARAM_STR);
-        $stmt->bindParam(':email', $obj->User->getEmail(), PDO::PARAM_STR);
+        $stmt->bindParam(':login', $obj->getUsername(), PDO::PARAM_STR);
+        $stmt->bindParam(':password', $obj->getPassword(), PDO::PARAM_STR);
+        $stmt->bindParam(':email', $obj->getEmail(), PDO::PARAM_STR);
         $stmt->execute();
-        $result = $stmt->fetch();
-        if ($result == TRUE) {
-            echo "ok";
-            echo $stmt->execute();
+        if ($stmt->rowCount() > 0) {
             return true;
-        } else {
-            echo "nope";
-            echo $stmt->errorInfo();
-            return false;
         }
+    }
 
-    }*/
+    public
+    function updatePassword($id, $password)
+    {
+        $sql = "UPDATE `users` SET `password` = :password WHERE `users`.`user_id` = :id";
+        $con = Connection::getInstance();
+        $stmt = $con->handle->prepare($sql);
+        $stmt->bindParam(':password', $password, PDO::PARAM_STR);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        if ($stmt->rowCount() > 0) {
+            return true;
+        }
+    }
+
 
 }

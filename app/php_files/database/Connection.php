@@ -26,9 +26,9 @@ class Connection
         try {
             $this->handle = new PDO($dsn, $user, $pass);
             $this->handle->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            echo '<p style="color:green">nazwiano</p>';
+          //  echo '<p style="color:green">nazwiano</p>';
         } catch (PDOException $e) {
-            echo '<p style="color:red">dupa' . $e->getMessage().'</p>';
+          //  echo '<p style="color:red">nie nawiazano' . $e->getMessage().'</p>';
         }
 
     }
